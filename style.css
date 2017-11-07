@@ -1,0 +1,543 @@
+/* Exercise PAZ Project Build web site like paz site */
+/* general design */
+*{
+    box-sizing: border-box;
+   }
+
+   body{
+    direction:rtl;
+    text-align:right;
+    margin: 0;
+    font-family: Arial;      
+  }
+/* main design */
+
+  header{        
+    position: relative;
+    width: 100%;
+    height: 105px;        
+    background: linear-gradient(rgb(144,144,144), rgb(168,168,168)); 
+  }
+
+  footer{       
+    width: 100%;
+    height: 38px;
+    position: fixed;
+    bottom: 0;      
+    background: linear-gradient(rgb(168,168,168), rgb(144,144,144));
+
+  }
+   
+  main{
+    width: 900px;
+    margin: auto;
+    padding-bottom: 50px;
+  }
+
+  .column{
+    float: right;          
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /* end main design */
+
+  /* design header search */
+  .search{      
+      height: 72px;  
+      position: relative;    
+  }
+
+   .a-language{
+    color: white;
+    text-decoration: none;    
+    font-size: 13px;
+    font-weight: bold;
+    position: absolute;
+    margin: 16px 840px 0 0;                  
+  }  
+   
+  .a-language:hover{
+    color: rgb(0,103,154);
+    text-decoration: underline;
+    font-weight: bold;
+  }  
+
+  .header-input-search{
+    position: absolute;
+    margin: 14px 900px 0 0;
+    border-top-right-radius: 10px; 
+    width: 126px;    
+  }
+
+  .header-input-search::placeholder{
+    color: black;    
+  }
+
+  .img-search{
+    position: absolute;
+    margin: 16px 1025px 0 0;
+  }
+  /* end design header search */
+  /* design paz logo and home image*/
+  .img-paz-logo{
+    position: absolute;
+    bottom: -20;
+    margin-right: 170px;
+  }
+
+  .img-home{
+    position: absolute;
+    margin-right: 340px;
+  }
+
+  /* design header horizontal menu*/
+  .top-menu{
+    margin-right: 200px;
+  }
+
+  .top-horizontal > ul{
+      list-style: none;
+      padding: 0;      
+      margin: 0;      
+      text-align: center;
+      height: 33px;
+  }
+
+  .top-horizontal > ul > li {
+      display: inline;      
+  }
+
+  .top-horizontal > ul > .dropdown-menu {    
+    border-right: 1px solid lightgray;
+}
+
+  .top-horizontal > ul > li > a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;  
+    font-size: 15px;
+    font-weight: bold;
+    height: 33px;
+    padding: 0 13px; 
+}
+
+.top-horizontal > ul > li > a:hover{
+  color: rgb(0,103,154);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.dropdown-menu{
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    right: 0; 
+    display: none;  
+    z-index: 1;
+    background-color:rgb(144,144,144);      
+  }
+ 
+    .dropdown-menu:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content > a {
+    display: block;
+    text-decoration: none; 
+    text-align: right;   
+    color: white;    
+    font-size: 15px;  
+    font-weight: bold;
+    padding: 5px;        
+    width: 155px;
+    border-bottom: 1px solid white;   
+  }
+  
+  .dropdown-content > a:hover{
+    color: rgb(0,103,154);
+    text-decoration: underline;
+    font-weight: bold;
+    background: rgb(188,188,188);
+  }
+  /* end design header horizontal menu*/
+  
+  /* design footer horizontal menu*/
+  .bottom-horizontal > ul {
+    list-style: none;
+    padding: 0;   
+    margin: 0;   
+    text-align: center;
+    }
+    
+    .bottom-horizontal > ul > li
+    {  
+      display: inline;          
+    }
+
+  .bottom-horizontal > ul > .bottom-li {    
+    border-right: 2px solid white;
+}
+
+  .bottom-horizontal > ul > li > a{
+    display: inline-block;    
+    color: white;
+    text-decoration: none;  
+    font-size: 14px;    
+    height: 38px;
+    padding: 0 20px;  
+}
+
+
+#bottom-a-red{
+  color: red;  
+}
+
+
+.bottom-horizontal > ul > li > a:hover{
+  color: rgb(0,103,154);
+  text-decoration: underline;  
+}
+/* end design footer horizontal menu*/
+
+/*primary design main */
+
+main > .row > .row1 > .column{
+  float: right;  
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row1-col{
+  width: 33%;
+  margin-top: 30px;  
+}
+
+.row2-col{
+  width: 33%;
+  margin-top: 20px;
+}
+
+/* end primary design main */
+
+/* design main first row */
+.row1-col-img{
+  width: 100%;  
+  border-bottom-right-radius: 20px;  
+}
+
+.row1-col-relarive{
+  position: relative;
+  width: 293px;
+  height: 355px;   
+}
+
+.row1-col-img{
+  width: 100%;
+  height: 100%;  
+}
+
+.row1-col-img-bck{
+  position: absolute;
+  bottom: 5;
+  margin-right: 10px;
+}
+
+.row1-col-head-pic{
+  position: absolute;
+  bottom: 65px;
+  margin-right: 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+}
+
+.row1-col-exp-pic{
+  position: absolute;
+  top: 270px;
+  margin-right: 15px;
+  font-size: 12px;
+  color: white;
+  width: 80%;
+}
+
+.row1-col-read-more{
+  position: absolute;
+  bottom: 5px;
+  margin-right: 180px;
+  color: white;
+  font-size: 13px;
+}
+
+.row1-col-read-more:hover{
+  color: rgb(0,103,154);
+}
+/* design main second row */
+
+.row2-col-background{
+  position: relative;  
+  width: 292px;
+  /*height: 216px;  */
+  height: 219px;
+}
+
+.row2-col-img-bck{
+  width: 100%;
+  height: 100%;  
+}
+
+.row2-col-p{
+  position: absolute;
+  top: 0;  
+  margin-right: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(87,87,87);
+}
+
+.row2-col-img{    
+  position: absolute;
+  bottom: 40px;
+  margin-right: 25px;
+}
+
+.row2-col-detail{
+  position: absolute;    
+  bottom: 15px;
+  margin-right: 170px;
+  color: rgb(114,113,109);
+  font-size: 13px;
+}
+
+.row2-col-detail:hover{
+  color: rgb(0,103,154);
+}
+
+/* design row2 column no. 3 */
+.row2-col3-nav{
+  position: absolute;
+  bottom: 70px;  
+  margin-right: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.row2-col3-nav > li
+{
+  text-align: right;  
+}
+
+.row2-col3-nav > li > a {
+  display: block;      
+  padding: 5px;      
+  color: rgb(114,113,109);
+  font-size: 13px;   
+}
+
+.row2-col3-nav > li > a:hover {
+  color: rgb(0,103,154);
+}
+
+.row2-col3-img{
+  position: absolute;
+  bottom: 0px;
+  margin-right: 180px;
+}
+/* end design row2 column no. 3 */
+
+/*design contact page main */
+.contact-main{
+  width: 900px;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.contact-column{
+  float: right;            
+  margin-right: 30px;
+}
+
+.contact-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*end design contact page main */
+
+/* design contact page main right div*/
+
+
+.a-contact-rcol{
+  text-decoration: none;  
+  font-size: 12px;
+  color:rgb(203,203,203)
+}
+
+.a-contact-rcol:hover {
+  color: rgb(0,103,154);
+}
+
+.p-contact-rcol{  
+  color: rgb(114,113,109);
+  font-weight: bold;  
+
+}
+
+.contact-rcol-background{
+  position: relative;
+  width: 385px;
+  height: 356px;
+}
+
+.img-contact-rcol{
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.contact-rcol-head{
+  position: absolute;
+  top: 10px;
+  margin-right: 10px;
+  color: rgb(0,92,160);
+  font-size: 15px;
+}
+
+.contact-rcol-p{
+  position: absolute;
+  top: 30px;
+  margin-right: 10px;
+  color: rgb(114,113,109);
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.form-contact-rcol{
+  position: absolute;
+  top: 90px;
+  margin-right: 10px;
+  font-size: 12px;
+  color: rgb(128,137,146);
+}
+
+
+.contact-input{
+  margin: 1px;  
+}
+
+.contact-input :focus {
+  border-color:rgb(102,140,199);
+}
+
+.contact-textarea{
+  font-size: 13px;
+  color: rgb(109,109,109);    
+}
+
+.contact-sub-but{
+  font-size: 14px;
+  color: white; 
+  background: linear-gradient(rgb(10,161,226), rgb(2,79,134));
+  margin-right: 230px;
+}
+/* end design contact page main right div*/
+.contact-main-ltopdiv{  
+  position: relative;
+  margin-top: 50px;  
+}
+
+.contact-main-lbotdiv{
+  position: relative;
+  margin-top: 50px; 
+}
+
+.cmltop-p1, .cmlbot-p1{
+  position: absolute;
+  top: 0px;
+  margin-right: 25px;
+  color: rgb(0,92,160);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+
+.cmltop-p2, .cmlbot-p2{
+  position: absolute;
+  top: 30px;
+  margin-right: 25px;  
+  color: rgb(109,109,109);
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.cmltop-p3{
+  position: absolute;
+  top: 45px;
+  margin-right: 25px;
+  color: rgb(109,109,109);
+  font-size: 13px;  
+}
+
+.cmltop-p4{
+  position: absolute;
+  top: 60px;
+  margin-right: 25px;
+  color: rgb(109,109,109);
+  font-size: 13px;  
+}
+
+.cmltop-p5{
+  position: absolute;
+  top: 75px;
+  margin-right: 25px;
+  color: rgb(109,109,109);
+  font-size: 13px;  
+}
+
+.cmltop-p6{
+  position: absolute;
+  top: 90px;
+  margin-right: 25px;
+  color: rgb(109,109,109);
+  font-size: 13px;  
+}
+
+.cmlbot-a3{
+  position: absolute;
+  top: 57px;
+  margin-right: 25px;
+  color: rgb(0,77,240);
+  font-size: 13px;  
+  text-decoration: none;
+}
+
+.cmlbot-p4{
+  position: absolute;
+  top: 60px;
+  margin-right: 25px;
+  color: rgb(109,109,109);
+  font-size: 13px;  
+}
+.cmlbot-a5{
+  position: absolute;
+  top: 87px;
+  margin-right: 25px;
+  color: rgb(0,77,240);
+  font-size: 13px;  
+  text-decoration: none;
+}
+
+.cmlbot-a3:hover, .cmlbot-a5:hover{
+  color: rgb(0,92,160);
+}
